@@ -15,13 +15,13 @@ export default function Short({article, load}){
     return(
         
             <section className='big-thumbnail' onClick={() => navigate(`/article/${article.ref['@ref'].id}`)}>
+                <img src={article.data.img} onLoad={() => load()} alt={`blog article ${article.data.title}`} />
                 <div className='container'>
                     <h4>{article.data.title}</h4>
                     <p>{article.data.description}</p>
                     <span>Dodano {new Date(article.data.date).toLocaleDateString()}</span>
                     <span>Z Kategorii {article.data.article_type}</span>
                 </div>
-                <img src={article.data.img} onLoad={() => load()} alt={`blog article ${article.data.title}`} />
             </section>
     )
 }

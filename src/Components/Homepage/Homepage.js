@@ -2,11 +2,11 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import VisitCard from "../VisitCard/VisitCard";
 import Short from "../Short/Short";
-import Thumbnail from '../Thumbnail/Thumbnail';
 
 import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 import Share from "../Share/Share";
+import Loader from "../Loader/Loader";
 
 export default function Homepage({articles, newest10}){
     const[isLoading, setLoading] = useState(true);
@@ -60,17 +60,13 @@ export default function Homepage({articles, newest10}){
             <meta property="og:description" content='Jest we mnie piękna, ciekawa świata istota o bogatej wyobraźni, która swoim uśmiechem i "magią rąk" sprawia, że świat nabiera barw...a ja ją biorę z miłością za rękę i malujemy, fotografujemy, sprawiając radość i zmieniając świat.'></meta>
             <meta property="og:image" content="https://joanneart.netlify.app/imgs/profile/profile.jpg"></meta>
         </Helmet>
-        {isLoading && <div className="riple-container"><div className="lds-ripple"><div></div><div></div></div></div>}
+        {isLoading && <Loader />}
         <VisitCard />
         <main>
             <div className='shorts'>
             {articles.map((article, key) => <Short load={load} article={article} key={key} />)}
             <Share url={"https://joanneart.netlify.app"}/>
             </div>
-            <section className='section'>
-                <h1>Najnowsze</h1>
-            {newest10 && newest10.map((article, key) => <Thumbnail article={article} key={key} />)}
-            </section>
         </main>
         </>
         

@@ -32,7 +32,6 @@ $gradient2: linear-gradient(90deg, $color-primary2, $color-primary);
 $gradient: linear-gradient(90deg, $color-secondary, $color-primary2);
 $backdrop-filter: blur(2px);
 $box-shadow: 0 3px 7px -2px #333;
-$text-shadow: 0 3px 3px #333;
 $border-radius: 0.5rem;
 $max-width-screen: 850px;
 $max-width-screen2: 1300px;
@@ -75,7 +74,6 @@ body{
 main{
     padding: 4rem 15vw;
     display: grid;
-    grid-template-columns: 3fr 1fr;
     align-items: baseline;
     gap: $gap2;
     @media only screen and (max-width: $max-width-screen2) {
@@ -500,7 +498,6 @@ section.text-2cols{
     margin: $margin;
     background-color: $background-color;
     border-radius: $border-radius;
-    box-shadow: $box-shadow;
     transition: $transition-duration;
     .container{
         overflow: hidden;
@@ -533,8 +530,8 @@ section.text-2cols{
 
 .big-thumbnail{
   padding: 0;
-  grid-template-columns: 1fr 1fr;
-  background: linear-gradient(90deg, $background-color 53%, $background-color-transparent);
+  grid-template-columns: 2fr 4fr;
+  background: transparent;
   transition: $transition-duration;
   cursor: pointer;
   .container{
@@ -551,9 +548,6 @@ section.text-2cols{
     max-height: max-content;
     border-radius: $border-radius;
   }
- &:hover{
-    color: $color-primary2;
- }
  @media only screen and (max-width: $max-width-screen) {
     &{
         grid-template-columns: 1fr;
@@ -570,9 +564,6 @@ section.text-2cols{
     color: $white;
     text-align: center;
     .container {
-        h4, span{
-            text-shadow: $text-shadow;
-        }
         span{
             font-weight: 600;
         }
