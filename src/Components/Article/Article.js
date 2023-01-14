@@ -86,7 +86,7 @@ export default function Article({ newest10, articles, comments, addComment, upda
                         case 'grid':
                             return <Grid key={key} loadProgress={loadProgress} setLoaded={(value) => setLoad(value)} updateLoading={(value) => setLoaded(value)} openGallery={openGallery} photos={part.content}/>
                         case 'img':
-                            return <img src={part.content} alt='for the blog article'  key={key}/>;
+                            return <img style={{margin: '3rem', maxWidth: '100%'}} onLoad={() => setLoaded(100)} src={part.content} alt='for the blog article'  key={key}/>;
                         default:
                             return null;
                     }

@@ -41,6 +41,7 @@ export default function Navigation({articles}){
           </>}</li>
             
             <li><NavLink to='/blog'>Blog</NavLink></li>
+            <li><NavLink to='/poezja'>Poezja</NavLink></li>
             <li><NavLink to='/aktualnosci'>Aktualności</NavLink></li>
             <li><NavLink to="/nowhere"  onClick={(e) => {
               e.preventDefault();
@@ -84,6 +85,7 @@ export default function Navigation({articles}){
             <li><NavLink onClick={() => setBurger(false)} to='/obrazy'>Obrazy</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/anioly'>Anioły</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/blog'>Blog</NavLink></li>
+            <li><NavLink onClick={() => setBurger(false)} to='/poezja'>Poezja</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/aktualnosci'>Aktualności</NavLink></li>
             <li><NavLink onClick={(e) => {
               e.preventDefault();

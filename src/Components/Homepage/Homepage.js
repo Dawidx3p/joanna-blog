@@ -67,7 +67,7 @@ export default function Homepage({ foto, description, articles, newest10}){
             <div className='shorts'>
                 {foto ? <img style={{objectFit: 'contain' ,width: '100%', maxHeight: '40vh'}} src={foto} alt={foto} /> : null}
                 <div className="description"><p>{description ? description : null}</p></div>
-            {articles.map((article, key) => <Short load={load} article={article} key={key} />)}
+            {articles.sort((a,b) => new Date(b.data.date)-new Date(a.data.date)).map((article, key) => <Short load={load} article={article} key={key} />)}
             <Share url={"https://joanneart.netlify.app"}/>
             </div>
             <section className='section'>
