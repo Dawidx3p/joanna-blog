@@ -13,14 +13,14 @@ export default function VisitCard(){
                         <h3>O mnie</h3>
                         <p>Jest we mnie piękna, ciekawa świata istota o bogatej wyobraźni, która swoim uśmiechem i "magią rąk" sprawia, że świat nabiera 
                             barw...a ja ją biorę z miłością za rękę i malujemy, fotografujemy, sprawiając radość i zmieniając świat.</p>
-                        <button onClick={() => navigate('/murale')}>Murale</button>
-                        <button onClick={() => navigate('/obrazy')}>Obrazy</button>
-                        <button onClick={() => navigate('/anioly')}>Anioły</button><br></br>
-                        <button onClick={() => navigate('/fotografia_artystyczna')}>Fotografia Art.</button>
-                        <button onClick={() => navigate('/reportaze')}>Fotoreportaż</button>
-                        <button onClick={() => navigate('/sesje_zdjeciowe')}>Sesje zdjęciowe</button><br></br>
-                        <button onClick={() => navigate('/murale')}>Blog osobisty</button><br></br>
-                        <button onClick={() => navigate('/murale')}>Poezja</button>
+                        <button className='primary' onClick={() => navigate('/murale')}>Murale</button>
+                        <button className='primary' onClick={() => navigate('/obrazy')}>Obrazy</button>
+                        <button className='primary' onClick={() => navigate('/anioly')}>Anioły</button><br></br>
+                        <button className='primary' onClick={() => navigate('/fotografia_artystyczna')}>Fotografia Art.</button>
+                        <button className='primary' onClick={() => navigate('/reportaze')}>Fotoreportaż</button>
+                        <button className='primary' onClick={() => navigate('/sesje_zdjeciowe')}>Sesje zdjęciowe</button><br></br>
+                        <button className='primary' onClick={() => navigate('/murale')}>Blog osobisty</button><br></br>
+                        <button className='primary' onClick={() => navigate('/murale')}>Poezja</button>
                     </div>
                 </div>
         </header>
