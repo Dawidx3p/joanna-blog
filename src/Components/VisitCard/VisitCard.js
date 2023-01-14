@@ -13,10 +13,12 @@ export default function VisitCard(){
                             barw...a ja ją biorę z miłością za rękę i malujemy, fotografujemy, sprawiając radość i zmieniając świat.</p>
                         <button>Murale</button>
                         <button>Obrazy</button>
-                        <button>Anioły</button>
+                        <button>Anioły</button><br></br>
+                        <button>Fotografia Artystyczna</button>
                         <button>Fotoreportaż</button>
-                        <button>Rodzinne sesje zdjęciowe</button>
-                        <button>Fotografia z naturyaa</button>
+                        <button>Sesje zdjęciowe</button><br></br>
+                        <button>Blog osobisty</button><br></br>
+                        <button>Poezja</button>
                     </div>
                 </div>
         </header>
