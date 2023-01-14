@@ -14,7 +14,7 @@ export default function VisitCard(){
                         <button>Murale</button>
                         <button>Obrazy</button>
                         <button>Anioły</button><br></br>
-                        <button>Fotografia Artystyczna</button>
+                        <button>Fotografia Art.</button>
                         <button>Fotoreportaż</button>
                         <button>Sesje zdjęciowe</button><br></br>
                         <button>Blog osobisty</button><br></br>
