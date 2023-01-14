@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 import Share from "../Share/Share";
 
-export default function Homepage({ description, articles, newest10}){
+export default function Homepage({ foto, description, articles, newest10}){
     const[isLoading, setLoading] = useState(true);
     const[loadedCouter, setCounter] = useState(0);
 
@@ -65,6 +65,7 @@ export default function Homepage({ description, articles, newest10}){
         <VisitCard />
         <main>
             <div className='shorts'>
+                {foto ? <img style={{objectFit: 'contain' ,width: '100%', maxHeight: '40vh'}} src={foto} alt={foto} /> : null}
                 <div className="description"><p>{description ? description : null}</p></div>
             {articles.map((article, key) => <Short load={load} article={article} key={key} />)}
             <Share url={"https://joanneart.netlify.app"}/>
