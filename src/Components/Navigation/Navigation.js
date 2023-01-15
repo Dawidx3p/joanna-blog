@@ -14,7 +14,7 @@ export default function Navigation({articles}){
       <>
         <nav className='main'>
           <NavLink to='/' className="nav-profile">
-            <img alt="logo" src="/logo.svg" style={{width: '120px', padding: '1rem 3rem'}}></img>
+            <img alt="logo" src="/logo.svg" style={{width: '90px', padding: '1.2rem 2rem'}}></img>
           </NavLink>
           <ul>
 
