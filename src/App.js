@@ -37,7 +37,7 @@ function App() {
   const blog = recent.filter(article => article.data.article_type==='Blog');
   const poezja = recent.filter(article => article.data.article_type==='Poezja');
   const grafika = recent.filter(article => article.data.article_type==='Grafika');
-  const newest10=[...grafika.slice(0,2), ...poezja.slice(0,2), ...blog.slice(0,2), ...murals.slice(0,2), ...angels.slice(0,2), ...paintings.slice(0,2), ...photoReportage.slice(0,2), ...photography.slice(0,2)].sort((a,b) => new Date(b.data.date) - new Date(a.data.date))
+  const newest10=[...grafika.slice(0,1), ...poezja.slice(0,1), ...blog.slice(0,1), ...murals.slice(0,1), ...angels.slice(0,1), ...paintings.slice(0,1), ...photoReportage.slice(0,1), ...photography.slice(0,1)].sort((a,b) => new Date(b.data.date) - new Date(a.data.date))
 
   useEffect(() => {
     getAllArticles().then(articles => setArticles([...articles].reverse()))
