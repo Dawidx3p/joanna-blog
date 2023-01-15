@@ -14,7 +14,7 @@ export default function Navigation({articles}){
       <>
         <nav className='main'>
           <NavLink to='/' className="nav-profile">
-            <h1 id="nav-header">JOANNEART</h1>
+            <img alt="logo" src="/logo.svg" style={{width: '120px', padding: '1rem 3rem'}}></img>
           </NavLink>
           <ul>
 
@@ -26,7 +26,7 @@ export default function Navigation({articles}){
           }}><NavLink to="/nowhere" onClick={(e) => e.preventDefault()}>Fotografia ▾</NavLink>{isPhotographyOpen &&<>
             <NavLink to='/fotografia_artystyczna'>Artystyczna</NavLink>
             <NavLink to='/sesje_zdjeciowe'>Sesje</NavLink>
-            <NavLink to='/reportaze'>Reportaże</NavLink>
+            <NavLink to='/fotoreportaze'>Fotoreportaże</NavLink>
             </>}</li>
             
           
@@ -84,6 +84,9 @@ export default function Navigation({articles}){
             <li><NavLink onClick={() => setBurger(false)} to='/murale'>Murale</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/obrazy'>Obrazy</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/anioly'>Anioły</NavLink></li>
+            <li><NavLink onClick={() => setBurger(false)} to='/fotoreportaze'>Fotoreportaże</NavLink></li>
+            <li><NavLink onClick={() => setBurger(false)} to='/sesje_zdjeciowe'>Sesje zdjęciowe</NavLink></li>
+            <li><NavLink onClick={() => setBurger(false)} to='/fotografia_artystyczna'>Fotografia artystyczna</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/blog'>Blog</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/poezja'>Poezja</NavLink></li>
             <li><NavLink onClick={() => setBurger(false)} to='/aktualnosci'>Aktualności</NavLink></li>

@@ -28,8 +28,8 @@ function App() {
 
   const recent = [...articles].sort((a,b) => compareDates(a,b)).reverse();
   const photography = recent.filter(article => article.data.article_type==='Fotografia Artystyczna');
-  const sesje = recent.filter(article => article.data.article_type==='Sesje Zdjęciowe');
-  const photoReportage = recent.filter(article => article.data.article_type==='Reportaż');
+  const sesje = recent.filter(article => article.data.article_type==='Sesja zdjęciowa');
+  const photoReportage = recent.filter(article => article.data.article_type==='Fotoreportaż');
   const paintings = recent.filter(article => article.data.article_type==='Obrazy');
   const angels = recent.filter(article => article.data.article_type==='Anioły');
   const murals = recent.filter(article => article.data.article_type==='Murale');
@@ -45,15 +45,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Homepage  newest10={newest10} articles={articles.slice(0,10)} />}/>
+          <Route path='/' element={<Homepage  newest10={newest10} articles={newest10.slice(0,8)} />}/>
           <Route path='/fotografia_artystyczna' element={<Homepage foto={'/imgs/opisowe/fotografia.jpg'} description={fotografiaart} newest10={newest10} articles={photography} />}/>
           <Route path='/obrazy' element={<Homepage foto={'/imgs/opisowe/malowanie.jpg'} description={malarstwo} newest10={newest10} articles={paintings} />}/>
           <Route path='/sesje_zdjeciowe' element={<Homepage foto={'/imgs/opisowe/fotografia.jpg'} description={fotografiaart} newest10={newest10} articles={sesje} />}/>
-          <Route path='/reportaze' element={<Homepage foto={'/imgs/opisowe/fotografia.jpg'} description={fotografiaart} newest10={newest10} articles={photoReportage} />}/>
+          <Route path='/fotoreportaze' element={<Homepage foto={'/imgs/opisowe/fotografia.jpg'} description={fotografiaart} newest10={newest10} articles={photoReportage} />}/>
           <Route path='/anioly' element={<Homepage foto={'/imgs/opisowe/malowanie.jpg'} description={malarstwo} newest10={newest10} articles={angels} />}/>
           <Route path='/murale' element={<Homepage foto={'/imgs/opisowe/murale.jpg'} description={malarstwo} newest10={newest10} articles={murals} />}/>
           <Route path='/blog' element={<Homepage foto={'/imgs/opisowe/blog.jpg'} newest10={newest10} articles={blog} />}/>
-          <Route path='/poezja' element={<Homepage foto={'/imgs/opisowe/blog.jpg'} newest10={newest10} articles={poezja} />}/>
+          <Route path='/poezja' element={<Homepage foto={'/imgs/opisowe/poezja.jpg'} newest10={newest10} articles={poezja} />}/>
           <Route path='/aktualnosci' element={<Homepage newest10={newest10} articles={recent} />}/>
           <Route path='/article/:id' element={<Article 
           newest10={newest10}
