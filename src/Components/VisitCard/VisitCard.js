@@ -20,7 +20,8 @@ export default function VisitCard(){
                         <button className='primary' onClick={() => navigate('/fotoreportaze')}>Fotoreportaże</button>
                         <button className='primary' onClick={() => navigate('/sesje_zdjeciowe')}>Sesje zdjęciowe</button><br></br>
                         <button className='primary' onClick={() => navigate('/blog')}>Blog osobisty</button><br></br>
-                        <button className='primary' onClick={() => navigate('/poezja')}>Poezja</button>
+                        <button className='primary' onClick={() => navigate('/poezja')}>Poezja</button><br></br>
+                        <button className='primary' onClick={() => navigate('/grafika')}>Grafika</button>
                     </div>
                 </div>
         </header>

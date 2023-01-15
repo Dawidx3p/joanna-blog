@@ -22,7 +22,7 @@ export default function Share({url}){
                 <FacebookShareButton url={url}>
                     <FacebookIcon   size="32" round="true"/>
                 </FacebookShareButton>
-                <PinterestShareButton url={url} media="https://joanneart.netlify.app/imgs/profile/profile.jpg">
+                <PinterestShareButton url={url} media="https://joanneart.pl/imgs/profile/profile.jpg">
                     <PinterestIcon   size="32" round="true"/>
                 </PinterestShareButton>
                 <TelegramShareButton url={url}>

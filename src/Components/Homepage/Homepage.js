@@ -55,11 +55,11 @@ export default function Homepage({ foto, description, articles, newest10}){
         <Helmet>
             <title>Joanneart</title>
             <meta property="og:site_name" content="Joanneart"></meta>
-            <meta property="og:url" content="https://joanneart.netlify.app"></meta>
+            <meta property="og:url" content="https://joanneart.pl"></meta>
             <meta property="og:type" content="blog"></meta>
             <meta property="og:title" content="Blog Joanneart. Tematy: Fotografia, Malarstwo, Murale, Sesja Zdjęciowa, Reportaż, Moda"></meta>
             <meta property="og:description" content='Jest we mnie piękna, ciekawa świata istota o bogatej wyobraźni, która swoim uśmiechem i "magią rąk" sprawia, że świat nabiera barw...a ja ją biorę z miłością za rękę i malujemy, fotografujemy, sprawiając radość i zmieniając świat.'></meta>
-            <meta property="og:image" content="https://joanneart.netlify.app/imgs/profile/profile.jpg"></meta>
+            <meta property="og:image" content="https://joanneart.pl/imgs/profile/profile.jpg"></meta>
         </Helmet>
         {isLoading && <div className="riple-container"><div className="lds-ripple"><div></div><div></div></div></div>}
         <VisitCard />
@@ -68,7 +68,7 @@ export default function Homepage({ foto, description, articles, newest10}){
                 {foto ? <img style={{objectFit: 'contain' ,width: '100%', maxHeight: '40vh'}} src={foto} alt={foto} /> : null}
                 <div className="description"><p>{description ? description : null}</p></div>
             {articles.sort((a,b) => new Date(b.data.date)-new Date(a.data.date)).map((article, key) => <Short load={load} article={article} key={key} />)}
-            <Share url={"https://joanneart.netlify.app"}/>
+            <Share url={"https://joanneart.pl"}/>
             </div>
             <section className='section'>
                 <h1>Najnowsze</h1>
