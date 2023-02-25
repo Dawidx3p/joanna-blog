@@ -20,6 +20,7 @@ function App() {
   const poezjatekst = 'Słowem wyrażałam zawsze swoje myśli, układałam je,gdy nie mogłam ogarnąć. Poezja to istna zabawa słowem, delektowanie się symboliką, bogactwem znaczeń, niedopowiedzeniami... przestrzenią pomiędzy wierszami. Pokazuje piękno języka. Nieraz tylko poezja potrafi wyrazić to,czego nie sposób powiedzieć wprost, opisać, namalować czy sfotografować.';
   const blogtekst = 'Ponad 20 lat pracy dziennikarskiej spowodowało, iż pisanie stało się dla mnie prawdziwą pasją. Pisząc blog o wyzwaniach, inspiracjach i odkryciach - będę mogła mieć kontakt z Czytelnikiem mojej strony, a przede wszystkim stworzę przestrzeń, która mam nadzieję będzie inspirować innych.';
   const grafikatekst = 'Rok 2023 rozpoczęłam wyjątkowym wyzwaniem, którym zainspirował mnie wyjątkowy i ważny dla mnie człowiek. Kiedyś brałam udział w wyzwaniu 365 - jedna fotografia każdego dnia, powstało ponad 300 zdjęć i niestety strona zmieniła zasady, odpuściłam... ale to wyzwanie było mobilizujące i wiele mi dało. Tym razem to wyzwanie 365 - jedna GRAFIKA każdego dnia. Będę je tu umieszczać co jakiś czas... Niech się dzieje kolejny, twórczy rok 2023!';
+  const modatekst = 'Kocham kolory i lubię się ubierać oryginalnie. Zawsze wyszukiwałam i łączyłam różne elementy ubiorów tak, żeby tworzyły coś ciekawego, niebanalnego. Dotyczyło to zarówno ubioru, jak i dodatków: biżuterii, rękawiczek, manetek, szali, po fascynatory... Kobiece piękno jest tożsame z pięknem natury, która mnie inspiruje i zachwyca. To z jej barw i wzorów chcę czerpać pomysły do tworzenia strojów pełnych barw jak motyle, delikatności jak kwiaty,  strojów, które podkreślają kobiecą zmienność jak zmienna jest natura wraz z porami roku i piękno. Chcę tworzyć stroje dla odważnych kobiet, świadomych swojej niepowtarzalności. W każdej z nas to jest. I każda kobieta odnajdzie tu coś swojego. Co jakiś czas pokaże się coś nowego, zaglądajcie, piszcie, inspirujcie i mnie...';
 
   const compareDates = (a,b) => {
     const date1 = new Date(a.data.date);
@@ -36,6 +37,7 @@ function App() {
   const murals = recent.filter(article => article.data.article_type==='Murale');
   const blog = recent.filter(article => article.data.article_type==='Blog');
   const poezja = recent.filter(article => article.data.article_type==='Poezja');
+  const moda = recent.filter(article => article.data.article_type==='Moda');
   const grafika = recent.filter(article => article.data.article_type==='Grafika');
   const newest10=[...grafika.slice(0,1), ...poezja.slice(0,1), ...blog.slice(0,1), ...murals.slice(0,1), ...angels.slice(0,1), ...paintings.slice(0,1), ...photoReportage.slice(0,1), ...photography.slice(0,1)].sort((a,b) => new Date(b.data.date) - new Date(a.data.date))
 
@@ -58,6 +60,7 @@ function App() {
           <Route path='/poezja' element={<Homepage foto={'/imgs/opisowe/poezja.jpg'} description={poezjatekst} newest10={newest10} articles={poezja} />}/>
           <Route path='/aktualnosci' element={<Homepage newest10={newest10} articles={recent} />}/>
           <Route path='/grafika' element={<Homepage foto={'/imgs/opisowe/grafika.jpg'} description={grafikatekst} newest10={newest10} articles={grafika} />}/>
+          <Route path='/moda' element={<Homepage foto={'/imgs/opisowe/grafika.jpg'} description={modatekst} newest10={newest10} articles={moda} />}/>
           <Route path='/article/:id' element={<Article 
           newest10={newest10}
           articles={articles} 
